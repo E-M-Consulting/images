@@ -30,7 +30,57 @@ To use these images in your applications, reference them using the raw GitHub UR
 https://raw.githubusercontent.com/[USERNAME]/images/main/[FILENAME]?raw=true
 ```
 
-### Example URLs
+### jsDelivr CDN URLs
+
+For better performance and reliability, use jsDelivr CDN:
+
+```
+https://cdn.jsdelivr.net/gh/[USERNAME]/images@main/[FILENAME]
+```
+
+#### Complete URL List
+
+**Logos:**
+- Black Logo: `https://cdn.jsdelivr.net/gh/[USERNAME]/images@main/logoBlack.png`
+- Blue Logo: `https://cdn.jsdelivr.net/gh/[USERNAME]/images@main/logoBlue.png`
+- Red Logo: `https://cdn.jsdelivr.net/gh/[USERNAME]/images@main/logoRed.png`
+- White Logo: `https://cdn.jsdelivr.net/gh/[USERNAME]/images@main/logoWhite.png`
+
+**Wordmarks:**
+- Dark Wordmark: `https://cdn.jsdelivr.net/gh/[USERNAME]/images@main/wordmarkDark.png`
+- Light Wordmark: `https://cdn.jsdelivr.net/gh/[USERNAME]/images@main/wordmarkLight.png`
+
+**Email Assets:**
+- Email Facebook: `https://cdn.jsdelivr.net/gh/[USERNAME]/images@main/emailFacebook.png`
+- Email Bug Report: `https://cdn.jsdelivr.net/gh/[USERNAME]/images@main/emailInBug.png`
+- Email Logo Red: `https://cdn.jsdelivr.net/gh/[USERNAME]/images@main/emailLogoRed.png`
+
+**Icons:**
+- Red Favicon: `https://cdn.jsdelivr.net/gh/[USERNAME]/images@main/faviconRed.ico`
+
+### Example HTML Usage
+
+```html
+<!-- Logo variations -->
+<img src="https://cdn.jsdelivr.net/gh/[USERNAME]/images@main/logoBlack.png" alt="Logo - Black">
+<img src="https://cdn.jsdelivr.net/gh/[USERNAME]/images@main/logoBlue.png" alt="Logo - Blue">
+<img src="https://cdn.jsdelivr.net/gh/[USERNAME]/images@main/logoRed.png" alt="Logo - Red">
+<img src="https://cdn.jsdelivr.net/gh/[USERNAME]/images@main/logoWhite.png" alt="Logo - White">
+
+<!-- Wordmarks -->
+<img src="https://cdn.jsdelivr.net/gh/[USERNAME]/images@main/wordmarkDark.png" alt="Wordmark - Dark">
+<img src="https://cdn.jsdelivr.net/gh/[USERNAME]/images@main/wordmarkLight.png" alt="Wordmark - Light">
+
+<!-- Email Assets -->
+<img src="https://cdn.jsdelivr.net/gh/[USERNAME]/images@main/emailFacebook.png" alt="Email - Facebook">
+<img src="https://cdn.jsdelivr.net/gh/[USERNAME]/images@main/emailInBug.png" alt="Email - Bug Report">
+<img src="https://cdn.jsdelivr.net/gh/[USERNAME]/images@main/emailLogoRed.png" alt="Email Logo - Red">
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/[USERNAME]/images@main/faviconRed.ico">
+```
+
+### GitHub Raw URLs (Alternative)
 
 ```html
 <!-- Logo variations -->
@@ -54,6 +104,28 @@ https://raw.githubusercontent.com/[USERNAME]/images/main/[FILENAME]?raw=true
 
 ### CSS Usage
 
+#### jsDelivr CDN
+
+```css
+.logo-black {
+  background-image: url('https://cdn.jsdelivr.net/gh/[USERNAME]/images@main/logoBlack.png');
+}
+
+.logo-white {
+  background-image: url('https://cdn.jsdelivr.net/gh/[USERNAME]/images@main/logoWhite.png');
+}
+
+.wordmark-dark {
+  background-image: url('https://cdn.jsdelivr.net/gh/[USERNAME]/images@main/wordmarkDark.png');
+}
+
+.email-logo {
+  background-image: url('https://cdn.jsdelivr.net/gh/[USERNAME]/images@main/emailLogoRed.png');
+}
+```
+
+#### GitHub Raw URLs
+
 ```css
 .logo-black {
   background-image: url('https://raw.githubusercontent.com/[USERNAME]/images/main/logoBlack.png?raw=true');
@@ -74,8 +146,20 @@ https://raw.githubusercontent.com/[USERNAME]/images/main/[FILENAME]?raw=true
 
 ### Markdown Usage
 
+#### jsDelivr CDN
+
+```markdown
+![Logo](https://cdn.jsdelivr.net/gh/[USERNAME]/images@main/logoBlue.png)
+![Wordmark Dark](https://cdn.jsdelivr.net/gh/[USERNAME]/images@main/wordmarkDark.png)
+![Email Logo](https://cdn.jsdelivr.net/gh/[USERNAME]/images@main/emailLogoRed.png)
+```
+
+#### GitHub Raw URLs
+
 ```markdown
 ![Logo](https://raw.githubusercontent.com/[USERNAME]/images/main/logoBlue.png?raw=true)
+![Wordmark Dark](https://raw.githubusercontent.com/[USERNAME]/images/main/wordmarkDark.png?raw=true)
+![Email Logo](https://raw.githubusercontent.com/[USERNAME]/images/main/emailLogoRed.png?raw=true)
 ```
 
 ## File Formats
@@ -85,12 +169,14 @@ https://raw.githubusercontent.com/[USERNAME]/images/main/[FILENAME]?raw=true
 
 ## Best Practices
 
-1. **Always include `?raw=true`**: This parameter is required to serve the image directly rather than the GitHub file view page
-2. **Choose the right format**: Use PNG for logos and graphics that need transparency
-3. **Consider theme compatibility**: Use appropriate color variants (dark/light) based on your application's theme
-4. **Email assets**: Use the email-specific images for consistent branding in email templates
-5. **Optimize loading**: Consider image dimensions and file sizes for your use case
-6. **Cache considerations**: GitHub's raw URLs are suitable for CDN usage but consider implementing proper caching strategies for production applications
+1. **Prefer jsDelivr CDN**: Use jsDelivr for better performance, global CDN, and automatic compression
+2. **GitHub Raw URLs as fallback**: Keep GitHub raw URLs as a backup option
+3. **Choose the right format**: Use PNG for logos and graphics that need transparency
+4. **Consider theme compatibility**: Use appropriate color variants (dark/light) based on your application's theme
+5. **Email assets**: Use the email-specific images for consistent branding in email templates
+6. **Optimize loading**: Consider image dimensions and file sizes for your use case
+7. **Cache considerations**: jsDelivr provides excellent caching, but consider implementing additional caching strategies for production applications
+8. **Version pinning**: Use `@main` for latest versions or pin to specific commits for stability
 
 ## Contributing
 
