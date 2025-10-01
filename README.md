@@ -11,11 +11,16 @@ This repository serves as a content delivery network (CDN) for images used acros
 - **logoWhite.png** - White version of the logo
 
 ### Wordmarks
-- **wordmarkDark.jpg** - Dark theme wordmark
-- **wordmarkLight.jpg** - Light theme wordmark
+- **wordmarkDark.png** - Dark theme wordmark
+- **wordmarkLight.png** - Light theme wordmark
+
+### Email Assets
+- **emailFacebook.png** - Facebook email template image
+- **emailInBug.png** - Email bug report image
+- **emailLogoRed.png** - Red logo for email templates
 
 ### Icons
-- **favicon.ico** - Website favicon
+- **faviconRed.ico** - Red-themed website favicon
 
 ## Usage
 
@@ -35,11 +40,16 @@ https://raw.githubusercontent.com/[USERNAME]/images/main/[FILENAME]?raw=true
 <img src="https://raw.githubusercontent.com/[USERNAME]/images/main/logoWhite.png?raw=true" alt="Logo - White">
 
 <!-- Wordmarks -->
-<img src="https://raw.githubusercontent.com/[USERNAME]/images/main/wordmarkDark.jpg?raw=true" alt="Wordmark - Dark">
-<img src="https://raw.githubusercontent.com/[USERNAME]/images/main/wordmarkLight.jpg?raw=true" alt="Wordmark - Light">
+<img src="https://raw.githubusercontent.com/[USERNAME]/images/main/wordmarkDark.png?raw=true" alt="Wordmark - Dark">
+<img src="https://raw.githubusercontent.com/[USERNAME]/images/main/wordmarkLight.png?raw=true" alt="Wordmark - Light">
+
+<!-- Email Assets -->
+<img src="https://raw.githubusercontent.com/[USERNAME]/images/main/emailFacebook.png?raw=true" alt="Email - Facebook">
+<img src="https://raw.githubusercontent.com/[USERNAME]/images/main/emailInBug.png?raw=true" alt="Email - Bug Report">
+<img src="https://raw.githubusercontent.com/[USERNAME]/images/main/emailLogoRed.png?raw=true" alt="Email Logo - Red">
 
 <!-- Favicon -->
-<link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/[USERNAME]/images/main/favicon.ico?raw=true">
+<link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/[USERNAME]/images/main/faviconRed.ico?raw=true">
 ```
 
 ### CSS Usage
@@ -52,6 +62,14 @@ https://raw.githubusercontent.com/[USERNAME]/images/main/[FILENAME]?raw=true
 .logo-white {
   background-image: url('https://raw.githubusercontent.com/[USERNAME]/images/main/logoWhite.png?raw=true');
 }
+
+.wordmark-dark {
+  background-image: url('https://raw.githubusercontent.com/[USERNAME]/images/main/wordmarkDark.png?raw=true');
+}
+
+.email-logo {
+  background-image: url('https://raw.githubusercontent.com/[USERNAME]/images/main/emailLogoRed.png?raw=true');
+}
 ```
 
 ### Markdown Usage
@@ -62,17 +80,17 @@ https://raw.githubusercontent.com/[USERNAME]/images/main/[FILENAME]?raw=true
 
 ## File Formats
 
-- **PNG**: Used for logos with transparency support
-- **JPG**: Used for wordmarks (compressed format)
+- **PNG**: Used for logos, wordmarks, and email assets with transparency support
 - **ICO**: Used for favicon (browser icon format)
 
 ## Best Practices
 
 1. **Always include `?raw=true`**: This parameter is required to serve the image directly rather than the GitHub file view page
-2. **Choose the right format**: Use PNG for logos that need transparency, JPG for photographic content
+2. **Choose the right format**: Use PNG for logos and graphics that need transparency
 3. **Consider theme compatibility**: Use appropriate color variants (dark/light) based on your application's theme
-4. **Optimize loading**: Consider image dimensions and file sizes for your use case
-5. **Cache considerations**: GitHub's raw URLs are suitable for CDN usage but consider implementing proper caching strategies for production applications
+4. **Email assets**: Use the email-specific images for consistent branding in email templates
+5. **Optimize loading**: Consider image dimensions and file sizes for your use case
+6. **Cache considerations**: GitHub's raw URLs are suitable for CDN usage but consider implementing proper caching strategies for production applications
 
 ## Contributing
 
@@ -91,7 +109,7 @@ To add new images or update existing ones:
 
 ## License
 
-Please ensure you have the appropriate rights to use these images. Check with the image owner regarding licensing and usage permissions.
+Please see the [license.md](license.md) file for licensing information and usage permissions.
 
 ## Notes
 
@@ -102,4 +120,4 @@ Please ensure you have the appropriate rights to use these images. Check with th
 
 ---
 
-*Last updated: September 2025*
+*Last updated: October 2025*
